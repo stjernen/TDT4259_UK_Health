@@ -4,17 +4,17 @@ from matplotlib import pyplot as plt
 targetCategory = "Fish"
 
 subCategoryName = "Salmon, tinned"
-subCategoryOffset = 16 # antall rader under targetCategory
+subCategoryOffset = 16 # antall rader under targetCategory, sjekk csv
 
-df = pd.read_csv("decile1_fixed.csv", sep=";")
-df2 = pd.read_csv("decile5_fixed.csv", sep=";")
-df3 = pd.read_csv("decile10_fixed.csv", sep=";")
+df = pd.read_csv("./data/food_data/decile1_fixed.csv", sep=";")
+df2 = pd.read_csv("./data/food_data/decile5_fixed.csv", sep=";")
+df3 = pd.read_csv("./data/food_data/decile10_fixed.csv", sep=";")
 
 index = 1
 for i in range(len(df["Food Category"])):
     if df["Food Category"][i] == targetCategory:
         index = i
- 
+
 index = index + subCategoryOffset
 
 x = df.keys()[2:24]
@@ -33,7 +33,6 @@ for key in x:
 
 plt.figure(figsize=(7,6))
 
-#plt.title(foodCategory)
 plt.title(subCategoryName)
 plt.xlabel("Year")
 plt.ylabel(units)
@@ -45,6 +44,6 @@ plt.xticks(rotation=45)
 
 plt.legend()
 
-plt.savefig(f"./foodplots/{subCategoryName}.png", dpi=300)
+plt.show()
 
-#plt.show()
+#plt.savefig(f"./plots/foodplots/subcategory_plots/{subCategoryName}.png", dpi=300)

@@ -8,7 +8,7 @@ result_df = pd.DataFrame(columns=["Year", "Bottom decile", "Middle decile", "Top
 # excel ark hentet fra:
 # https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014
 
-excel_dir = "./income_excel_sheets"
+excel_dir = "./data/income_excel_sheets"
 sheets = {}
 for filename in os.listdir(excel_dir):
     
@@ -69,10 +69,7 @@ plt.title("Gross income by Decile")
 plt.legend()
 
 # Show the plot
-#plt.show()
+plt.show()
 
 # Save the plot
 #plt.savefig("gross_income_by_decile.png", dpi=300)
-
-# save the data as a csv
-result_df.to_csv('gross_income_by_decile.csv')

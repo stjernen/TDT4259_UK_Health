@@ -3,9 +3,9 @@ from matplotlib import pyplot as plt
 
 targetGroups = ["Processed vegetables excluding processed potatoes", "Processed fruit and fruit products"]
 
-df = pd.read_csv("decile1_FoodGroup.csv", sep=";")
-df2 = pd.read_csv("decile5_FoodGroup.csv", sep=";")
-df3 = pd.read_csv("decile10_FoodGroup.csv", sep=";")
+df = pd.read_csv("./data/food_data/decile1_FoodGroup.csv", sep=";")
+df2 = pd.read_csv("./data/food_data/decile5_FoodGroup.csv", sep=";")
+df3 = pd.read_csv("./data/food_data/decile10_FoodGroup.csv", sep=";")
 
 indexes = [-1, -1, -1]
 for i in range(len(df["Food Group"])):

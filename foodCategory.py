@@ -3,9 +3,9 @@ from matplotlib import pyplot as plt
 
 targetCategory = "Fish"
 
-df = pd.read_csv("decile1_FoodCategory.csv", sep=";")
-df2 = pd.read_csv("decile5_FoodCategory.csv", sep=";")
-df3 = pd.read_csv("decile10_FoodCategory.csv", sep=";")
+df = pd.read_csv("./data/food_data/decile1_FoodCategory.csv", sep=";")
+df2 = pd.read_csv("./data/food_data/decile5_FoodCategory.csv", sep=";")
+df3 = pd.read_csv("./data/food_data/decile10_FoodCategory.csv", sep=";")
 
 index = 1
 for i in range(len(df["Food Category"])):
@@ -21,8 +21,6 @@ y2 = []
 y3 = []
  
 for key in x:
-    #print(df3)
-    print(key)
     y.append(df[key][index])
     y2.append(df2[key][index])
     y3.append(df3[key][index])
