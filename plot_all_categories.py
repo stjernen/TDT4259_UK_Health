@@ -28,7 +28,7 @@ for category in all_categories_not_null:
         y2.append(df2[key][index])
         y3.append(df3[key][index])
     
-    plt.figure()
+    plt.figure(figsize=(10,7))
     plt.title(foodCategory)
     plt.xlabel("Year")
     plt.ylabel(units)
